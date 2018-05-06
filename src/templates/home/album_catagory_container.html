@@ -1,0 +1,23 @@
+
+<section class="music-catagory-container">
+                <div class="music-catagory-title">
+                    <p>Albums</p>
+                </div>
+                <div class="music-catagory-container-inner">
+                    <div class="music-catagory-list">
+    <!--                    repeat items-->
+                        {% for album in album_obj %}
+                            {% include 'home/album_item.html' with album=album %}
+                        {% endfor %}
+    <!--                   End repeat items-->
+                    </div>
+                </div>
+                <div class="music-catagory-more">
+                {% if not category %}
+                    <a href="{% if artist %}/artist/album/?q={{ artist }}{% elif uploader %}/uploader/album/?q={{ uploader.id }}{% else %}/search/{% if search_q %}?q={{ search_q }}&catagory=album{% else %}album{% endif %}{% endif %}">SHOW MORE
+                    <i class="fas fa-angle-down"></i>
+                    </a>
+                {% endif %}
+                    
+                </div>
+            </section>

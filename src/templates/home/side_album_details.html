@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<div id="album-playlist-details" class="col-md-4">
+    <div id="album-playlist-details-inner">
+        <div id="album-palylist-cover-image">
+            <img src="{% if album_obj.album_cover %}{{ album_obj.album_cover.url }}{% else %}{% static 'components/album_default.jpg' %}{% endif %}">
+        </div>
+        <div id="album-palylist-details-text">
+            <p id="album-playlist-name">{% if album_obj %}{{ album_obj.name }}{% elif playlist_obj %}{{ playlist_obj.name }}{% endif %}</p>
+            <p id="album-playlist-uploaded-by"><a href="/uploader/?q={% if album_obj %}{{ album_obj.uploaded_by.id }}{% elif playlist_obj %}{{ playlist_obj.uploaded_by.id }}{% endif %}">{% if album_obj %}{{ album_obj.uploaded_by.user_set.name }}{% elif playlist_obj %}{{ playlist_obj.uploaded_by.user_set.name }}{% endif %}</a></p>
+            <p id="album-playlist-total-music">{% if album_obj %}Album{% elif playlist_obj%}Playlist{% endif %}</p>
+            <p id="album-playlist-no-song-year">
+                <b id="album-playlist-year">{% if album_obj %}{{ album_obj.create_time.year }}{% elif playlist_objcreate_time.year %}{{ playlist_obj }}{% endif %}</b>
+                <b id="album-playlist-yea-dot">.</b>
+                <b id="album-playlist-no-song">{{ album_no_of_music }} song{% if album_no_of_music > 1 %}s{% endif %}</b>
+            </p>
+        </div>
+        <div id="album-palylist-details-action">
+             <p><a class="link-click-play" href="{% if album_obj %}/album/play/{{ album_obj.id }}{% elif playlist_obj %}/playlist/play/{{ playlist_obj.id }}{% endif %}" id="album-palylist-play">Play</a></p>
+{#            <p><a href="#" id="album-palylist-save">Save</a></p>#}
+{#            <p><a href="#" id="album-palylist-report">Report</a></p>#}
+        </div>
+    </div>
+</div>

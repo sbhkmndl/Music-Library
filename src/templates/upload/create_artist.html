@@ -1,0 +1,13 @@
+{% extends 'upload/upload_music_base.html' %}
+
+{% block upload_content %}
+<form method="post" action="." enctype="multipart/form-data"> {% csrf_token %}
+    <div id="upload-form">
+
+        {{ form.as_p }}
+    </div>
+    <div id="upload-submit-button">
+        <input type="submit" value="Create">
+    </div>
+</form>
+{% endblock %}

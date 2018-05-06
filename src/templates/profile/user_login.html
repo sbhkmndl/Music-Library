@@ -1,0 +1,25 @@
+{% extends "profile/profile_base.html" %}
+
+{% block form_content %}
+
+    <form method="post" action="."> {% csrf_token %}
+        <div id="login-signup-form">
+
+             {{ form }}
+{#            <label>username</label>#}
+{#            <input type="text" placeholder="Username">#}
+{#            <label>Password</label>#}
+{#            <input type="password" placeholder="Password">#}
+        </div>
+        <div id="login-signup-form-submit">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+    <div class="login-signup-forget-password">
+        <a href="/profile/register">Register</a>
+    </div>
+    <div class="login-signup-forget-password">
+        <a href="/profile/forgetPassword">Forger Password</a>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load staticfiles %}
+{% load template_extra %}
+{% if not no_album_music.album %}
+<div class="music-catagory-item">
+    <div class="music-catagory-item-image">
+        <button class="hide-visible-button">
+            <img src="{% if album.album_cover %}{{ album.album_cover.url }}{% else %}{% static 'components/album_default.jpg' %}{% endif %}">
+
+
+                                       <a class="link-click-play" href="/album/play/{{ album.id }}"> <i class="fas fa-play"></i></a>
+                                      </button>
+    </div>
+    <div class="div-catagory-item-name">
+        <p>
+            <a class="catagory-item-name-bolt" href="/album/{{ album.id }}">{{ album.name }}</a></p>
+
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,221 @@
+
+   
+#album-playlist-inner{
+    width: inherit;
+    height: 100%;
+    position: relative;
+    padding: 20px 15px;
+    
+}
+/*bootstrap 4 col  side details*/
+#album-playlist-details{
+    text-align: center;
+    line-height: 20px;
+}
+#album-playlist-details a{
+    text-decoration: none;
+    
+}
+#album-palylist-cover-image{
+  padding: 5px;
+}
+#album-palylist-cover-image img{
+    width: 150px;
+    height: 150px;
+}
+#album-palylist-details-text{
+    
+}
+#album-playlist-name{
+    font-size: 30px;
+    color: #A0C3D2;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+#album-playlist-uploaded-by,#album-playlist-total-music{
+    color: #A0C3D2;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#album-playlist-uploaded-by a{
+    color: #949494;
+}
+#album-playlist-total-music{
+    color: #949494;
+}
+
+#album-playlist-no-song-year{
+    color: #42b24d;
+    font-size: 11px;
+    text-transform: uppercase;;
+}
+#album-playlist-yea-dot{
+    font-size: 15px;
+    border-style: none;
+    color: #bdc6c6;
+    
+}
+
+/*Action buttons*/
+#album-palylist-details-action{
+    text-align: center;
+
+}
+#album-palylist-details-action a{
+   
+}
+
+#album-palylist-play{
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: #2F4D5E;
+    cursor: pointer;
+    color: #9bd4b9;
+    font-size: 14px;
+    padding: 8px 23px;
+}
+#album-palylist-play:hover{
+    background-color: #2F4D5E;
+}
+#album-palylist-save,
+#album-palylist-report{
+     width: 70px;
+    height: 35px;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #ccd49b;
+    font-size: 12px;
+}
+#album-palylist-save:hover,
+#album-palylist-report:hover{
+    font-size: 11px;
+}
+
+
+
+/*bootstrap 8 col musics in playlist*/
+#album-palylist-content{
+    overflow: auto;
+}
+
+#album-palylist-content-inner{
+    padding: 20px;
+}
+
+.album-palylist-music-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 60px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #6eb9cd;
+    border-width: 0.5px;
+    margin: 5px;
+}
+.album-palylist-music-play-button{
+     width: 10%;   
+    text-align: center;
+    padding: 25px 0px;
+    position: relative;
+}
+.album-palylist-music-play-button>a{
+    width: 30px;
+    height: 22px;
+    background-color: transparent;
+    color: #9eccef;
+    border-style: none;
+    cursor: pointer;
+    font-size: 15px;
+    
+}
+.album-palylist-music-play-button>a:hover{
+    font-size: 14px;
+}
+.album-palylist-single-music-info{
+    width: 80%;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 7px;
+}
+.album-palylist-single-music-name{
+    font-size: 18px;
+    margin: 3px;
+    color: #fff;
+}
+.album-palylist-single-music-name a{
+    text-decoration: none;
+    color: #A0C3D2;
+}
+.album-palylist-single-music-artist-album{
+    display: flex;
+}
+.album-palylist-single-music-artist-album p{
+    margin: 0px 3px;
+}
+.album-palylist-single-music-artist-album a{
+    text-decoration: none;
+    color: #B9BABC;
+    font-size: 13px;
+}
+.album-palylist-single-music-artist-album a:hover{
+    text-decoration: underline;
+}
+
+.a-p-s-m-dot{
+    width: 4px;
+    height: 4px;
+    background-color: #abc4f7;
+    border-radius: 50%;
+    top: 2px;
+    position: relative;
+}
+.album-palylist-single-music-duration{
+    color: #C1D49B;
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding: 15px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

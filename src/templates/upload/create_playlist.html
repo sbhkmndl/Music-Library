@@ -1,0 +1,32 @@
+{% extends 'upload/upload_music_base.html' %}
+
+{% block upload_content %}
+<form method="post" action="." enctype="multipart/form-data"> {% csrf_token %}
+    <div id="upload-form">
+
+        {{ form.as_p }}
+{#        <p>#}
+{#            <label>Playlist Name</label>#}
+{#            <input type="text" />#}
+{#        </p>#}
+{##}
+{#        <p>#}
+{#            <label>Type</label>#}
+{#            <select>#}
+{#                                          <option value="rock">Rock</option>#}
+{#                                          <option value="pop">Pop</option>#}
+{#                                          <option value="jzzz">Jazz</option>#}
+{#                                    </select>#}
+{#        </p>#}
+{##}
+{#        <p>#}
+{#            <label>Share</label>#}
+{#            <input class="upload-input-check" type="checkbox">#}
+{#        </p>#}
+
+    </div>
+    <div id="upload-submit-button">
+        <input type="submit" value="Create">
+    </div>
+</form>
+{% endblock %}

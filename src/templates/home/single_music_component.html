@@ -1,0 +1,26 @@
+{% load template_extra %}
+<div class="album-palylist-music-container">
+
+    <div class="album-palylist-music-play-button">
+        <a class="link-click-play" name="{{ music.id }}" href="/music/play/{{ music.id }}"><i class="fas fa-play"></i></a>
+    </div>
+
+    <div class="album-palylist-single-music-info">
+        <div class="album-palylist-single-music-name">
+             <p class="a-p-s-m-name"><a href="#">{{ music.name }}</a></p>
+        </div>
+        <div class="album-palylist-single-music-artist-album">
+            <p class="a-p-s-m-art"><a href="/artist/?q={{ music.artist.name }}">{% name_capitalize music.artist.name %}</a></p>
+            {% if music.album %}
+            <p class="a-p-s-m-dot"></p>
+            <p class="a-p-s-m-alb"><a href="/album/{{ music.album_id }}">{{ music.album }}</a></p>
+            {% endif %}
+        </div>
+    </div>
+
+
+    <div class="album-palylist-single-music-duration">
+        <p class="a-p-s-m-dur">{{ music.duration_min }}:{% if music.duration_sec < 10 %}0{% endif %}{{ music.duration_sec }}</p>
+    </div>
+
+</div>

@@ -1,0 +1,14 @@
+{% load static %}
+{% load template_extra %}
+{% if artist or uploader %}
+<div id="artist-name-containner">
+    <div id="artist-name">
+        {% if uploader.user_image or artist.artist_image %}
+            <img src="{% if artist %}{{ artist.artist_image.url }}{% else %}{{ uploader.user_image.url }}{% endif %}">
+        {% endif %}
+        <p>{% if artist %}{% name_capitalize artist.name %}{% elif uploader %}{{ uploader.name }}{% endif %}</p>
+
+{#        <button id="artist-about-button">About</button>#}
+    </div>
+</div>
+{% endif %}

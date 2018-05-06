@@ -1,0 +1,21 @@
+
+<section id="success-messages">
+        <div id="show-message">
+           <b>
+            <i id="display-message">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </i>
+           <button id="message-close-button"><i class="fas fa-times"></i></button>
+           </b>
+        </div>
+</section>
+<script>
+var close_button = document.getElementById('message-close-button');
+var message_div = document.getElementById('success-messages');
+
+close_button.addEventListener('click',function(){
+   message_div.style.display = 'none' 
+});
+</script>

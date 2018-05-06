@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<section id="side-info-bar">
+        <div id="music-app-logo">
+            <div id="music-app-logo-container">
+               <a href="/"><img src="{% static 'components/logo.png' %}"></a>
+            </div>
+            <div id="music-app-name"><i>Music</i> Library</div>
+        </div>
+
+        <div class="side-bar-underline"></div>
+        <div id="music-search">
+            <form id="music-search-form" method="get" action="{% url 'music_search' %}" accept-charset="utf-8">
+                <div id="music-search-container">
+                    <input id="music-search-text" name="q" type="text">
+                    <input id="music-search-submit" type="submit" value="">
+                </div>
+            </form>
+        </div>
+
+
+        <div class="side-bar-underline"></div>
+        <div id="music-playlist-lists">
+            <p><a href="/">HOME</a></p>
+            <p><a href="/edit/music">Music</a></p>
+            <p><a href="/edit/playlist">Playlist</a></p>
+            <p><a href="/edit/album">Album</a></p>
+{#            <p><a href="#">save musics</a></p>#}
+        </div>
+
+        <div class="side-bar-underline"></div>
+{#        <div id="music-suggetion-list">#}
+{#            <p><a href="#">Resently play</a></p>#}
+{#            <p><a href="#">Top Music</a></p>#}
+{#        </div>#}
+
+        <div class="side-bar-underline"></div>
+
+
+        <div id="side-bar-profile">
+            <div id="side-bar-profile-pic">
+                <img src="{% if request.user.is_authenticated %}{% if request.user.user_set.user_image %}{{ request.user.user_set.user_image.url }}{% else %}{% static 'components/profile-default.png' %}{% endif %}{% else %}{% static 'components/profile-default.png' %}{% endif %}">
+            </div>
+            <p><a href="/edit/user">{% if request.user.is_authenticated %}{{ request.user.user_set.name }}{% else %}{{ request.user }}{% endif %}</a></p>
+        </div>
+
+    </section>

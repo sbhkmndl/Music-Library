@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<section id="edit-view-menubar">
+            <div id="menubar-container">
+                <div id="menubar-container-logo">
+                    <div id="edit-topbar-logo">
+                        <a href="/"><img src="{% static 'components/logo.png' %}"></a>
+                    </div>
+                </div>
+                <div id="menubar-container-selections">
+                    <div id="edit-lopbar-profile">
+                        <a href="/edit/user">Profile</a>
+                    </div>
+                    <div id="edit-lopbar-songs">
+                        <a href="/edit/music">Songs</a>
+                    </div>
+                    <div id="edit-lopbar-albums">
+                        <a href="/edit/album">Albums</a>
+                    </div>
+                    <div id="edit-lopbar-playlists">
+                        <a href="/edit/playlist">Playlists</a>
+                    </div>
+                </div>
+                <div id="menubar-container-logout">
+                    <div id="edit-lopbar-logout">
+                        <a href="/profile/logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </section>

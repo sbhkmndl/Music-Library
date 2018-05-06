@@ -1,0 +1,51 @@
+#success-messages{
+    position: fixed;
+    text-align: center;
+    z-index: 20;
+    width: 100%;
+}
+#show-message{
+
+}
+#show-message>b{
+    min-width: 40%;
+    background-color: rgba( 69, 242, 120, 0.469 );
+    margin: 10px;
+    padding: 10px 10px 10px 30px;
+    border-radius: 7px;
+    color: #201b45
+}
+#show-message button{
+     background-color: transparent;
+    border-style: none;
+    padding: 10px 10px 10px 20px;
+    cursor: pointer;
+}
+.color_red{
+    background-color: rgba( 243, 43, 36, 0.539 );
+}
+
+
+/*delete confirmation button*/
+.confirm-delete{
+    text-align: center;
+    padding: 25px;
+    color: wheat;
+}
+.confirm-delete input{
+    background-color: rgba( 241, 73, 64, 0.546 );
+    border-color: #91f7d5;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 3px 6px;
+}
+.confirm-delete a{
+    text-decoration: none;
+    border-style: solid;
+    border-color: #09b320;
+    background-color: rgba( 29, 245, 47, 0.522 );
+    color: #fff;
+    padding: 3px 6px;
+    margin-left: 10px;
+}

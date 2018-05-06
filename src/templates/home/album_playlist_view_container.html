@@ -1,0 +1,15 @@
+<section id="album-playlist-container">
+            <div id="album-playlist-inner" class="container">
+                <div class="row">
+
+                    <!--                       side playlist details-->
+                        {% include 'home/side_album_details.html' with album_obj=album_obj playlist_obj=playlist_obj album_no_of_music=album_no_of_music%}
+
+                    <!--                        playlist songs-->
+
+                    {% include 'home/side_album_songs_container.html' with music_obj=music_obj %}
+                    
+                </div>
+            </div>
+
+        </section>

@@ -1,0 +1,12 @@
+{% extends 'edit/music_edit_delete_bash.html' %}
+ {% block editmusic %}
+<div class="confirm-delete">
+    <form action="" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <div class="confirm-delete-button">
+    <input type="submit" value="Confirm" />
+    <a href="{% if cancel %}{{ cancel }}{% else %}#{% endif %}">Cancel</a>
+    </div>
+</form>
+</div>
+{% endblock %}

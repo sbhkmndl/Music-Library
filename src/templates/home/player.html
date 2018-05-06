@@ -1,0 +1,73 @@
+{% load staticfiles %}
+{% load template_extra %}
+<section id="music-player">
+        <!--           Music Information-->
+        <div id="music-info">
+            <div id="music-img">
+                <img src="{% static 'components/album_default.jpg' %}">
+            </div>
+            <div id="music-details">
+                <p id="music-name"><a href="#">Unknown</a></p>
+                <p id="music-artist"><a href="#">Unknown</a></p>
+                <p id="music-album"><a href="#">Unknown</a></p>
+            </div>
+            <div id="music-add-to-playlist">
+               {% if request.user.is_authenticated %}
+                    <button class="tooltip creatte-artist" id="playlist-add-button">+
+                <span class="tooltiptext">
+                    <div>
+                        <p><a href="/create/playlist">create playlist</a></p>
+                        <div class="playlist-line"></div>
+                        {% get_albums request %}
+
+                    </div>
+                </span>
+                </button>
+                {% endif %}
+            </div>
+        </div>
+
+        <!--            Music Status -->
+        <div id="music-control">
+            <div id="button-control">
+                <button id="button-prev">
+                       <img src="{% static 'components/Pre.png' %}">
+                   </button>
+                <button id="button-play">
+                       <img src="{% static 'components/Play.png' %}">
+                   </button>
+                <button id="button-next">
+                       <img src="{% static 'components/Next.png' %}">
+                   </button>
+            </div>
+            <div id="music-play-info">
+                <div id="play-time">00:00</div>
+                <div id="play-control-bar">
+                    <div id="play-status-bar"></div>
+                    <div id="paly-handeler"></div>
+                </div>
+                <div id="total-time">00:00</div>
+            </div>
+        </div>
+        <!--          current play and volume-->
+        <div id="player-volume">
+            <div id="current-play">
+                <button id="current-playlist">
+                   <img src="{% static 'components/current-playlist.png' %}">
+               </button>
+            </div>
+            <div id="volume-control main">
+                <div id="volume-control">
+                    <button id="volume-down"><p>-</p></button>
+                    <button id="volume-mute">
+                       <img src="{% static 'components/volume-default.png' %}">
+                   </button>
+                    <button id="volume-up"><p>+</p></button>
+                </div>
+                <div id="volume-control-status">
+                    <div id="volume-control-status-current"></div>
+                    <div id="volume-control-handler"></div>
+                </div>
+            </div>
+        </div>
+    </section>

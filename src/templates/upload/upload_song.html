@@ -1,0 +1,23 @@
+{% extends 'upload/upload_music_base.html' %}
+
+{% block upload_content %}
+
+<form method="post" action="." enctype="multipart/form-data"> {% csrf_token %}
+    <div id="upload-form">
+
+{#            {{ form.as_p }}#}
+{% for field in form %}
+    <p>
+        {{ field.errors }}
+        {{ field.label_tag }} {{ field }}
+        {% if field.name == "artist" %}
+          <a class="tooltip creatte-artist" href="/create/artist">  <span class="tooltiptext">Add Artist</span>+</a>
+        {% endif %}
+    </p>
+{% endfor %}
+    </div>
+    <div id="upload-submit-button">
+        <input type="submit" value="Upload">
+    </div>
+</form>
+{% endblock %}

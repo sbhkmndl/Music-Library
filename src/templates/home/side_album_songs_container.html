@@ -1,0 +1,11 @@
+<div id="album-palylist-content" class="col-md-8">
+                        <div id="album-palylist-content-inner">
+                            <!--                             playlist songs-->
+<!--                            dynamic-->
+
+                            {% for music in music_obj %}
+                                {% include 'home/single_music_component.html' with music=music %}
+                            {% endfor %}
+<!--               dynamic end-->
+                        </div>
+                    </div>

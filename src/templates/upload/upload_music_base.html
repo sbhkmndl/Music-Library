@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% if title %}{{ title }} | {% endif %}Music Library</title>
+
+    <!--    Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+
+
+    <!--icon-->
+    <link rel="icon" type="image/ico" href="{% static 'components/logo.png' %}">
+
+    <!-- BootStrap CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/success_message.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/music_upload.css' %}">
+
+
+
+</head>
+
+<body>
+{% if messages %}
+    {% include 'messages/success_message.html' with messages=messages %}
+{% endif %}
+    <section id="upload-container-main">
+       <div id="upload-background-blur">
+            <div id="upload-container-inner">
+                <div id="upload-container-middel">
+                    <div id="upload-page-title">
+                   <p>
+                       <a href="/"><img src="{% static 'components/logo.png' %}"></a>
+                   </p>
+                    <p>Music Library</p>
+                    <p id="upload-page-relation">{% if title %}{{ title }}{% endif %}</p>
+                    </div>
+                    <div id="upload-form-container">
+                       
+<!--                       block-->
+                        {% block upload_content %}
+
+                        {% endblock %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

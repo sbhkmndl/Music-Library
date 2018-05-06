@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<div class="music-catagory-item">
+    <div class="music-catagory-item-image">
+        <button class="hide-visible-button">
+            <img src="{% if playlist.playlist_cover %}{{ playlist.playlist_cover.url }}{% else %}{% static 'components/album_default.jpg' %}{% endif %}">
+        </button>
+    </div>
+    <div class="div-catagory-item-name">
+        <p>
+            <a class="catagory-item-name-bolt" href="/playlist/{{ playlist.id }}">{{ playlist.name }}</a>
+        </p>
+        <p class="album-edit-action">
+            <a class="edit-album-edit" href="{{ playlist.id }}"><i class="fas fa-edit"></i></a>
+            <a class="edit-album-delete" href="{{ playlist.id }}/delete"><i class="fas fa-times-circle"></i></a>
+        </p>
+    </div>
+</div>

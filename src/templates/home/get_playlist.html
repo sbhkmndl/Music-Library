@@ -1,0 +1,5 @@
+{% if playlist_list %}
+    {% for playlist in playlist_list %}
+        <a class="link-add-playlist" href="/add/playlist/{{ playlist.id }}/music/">{{ playlist.name }}</a>
+    {% endfor %}
+{% endif %}

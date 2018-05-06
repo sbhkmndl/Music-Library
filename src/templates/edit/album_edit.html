@@ -1,0 +1,23 @@
+{% extends 'edit/music_edit_delete_bash.html' %}
+ {% block editmusic %}
+
+
+
+        <div class="music-catagory-list">
+            <!--                    create album-->
+            {% include 'edit/create_album_link.html' %}
+
+            <!--   end create album-->
+            <!--                    repeat items-->
+
+    {% if albums %}
+        {% for album in albums %}
+            {% include 'edit/album_edit_component.html' with album=album %}
+
+        {% endfor %}
+    {% endif %}
+
+            <!--                   End repeat items-->
+        </div>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% load template_extra %}
+<div class="music-catagory-list-single">
+                        <!--                       Copy from album playlist -->
+                        <div class="album-palylist-music-container">
+
+                            <div class="album-palylist-single-music-info">
+                                <div class="album-palylist-single-music-name">
+                                    <p class="a-p-s-m-name">{{ music.name }}</p>
+                                </div>
+                                <div class="album-palylist-single-music-artist-album">
+                                    <p class="a-p-s-m-art"><a href="/artist/?q={{ music.artist.name }}">{% name_capitalize music.artist.name %}</a></p>
+                                    <p class="a-p-s-m-dot"></p>
+                                    <p class="a-p-s-m-alb"><a href="/album/{{ music.album_id }}">{{ music.album.name }}</a></p>
+                                </div>
+                            </div>
+
+
+                            <div class="album-palylist-single-music-duration edit-music-right-align">
+                                <p class="album-edit-action">
+{#                                    {% if not playlist %}#}
+{#                                    <a class="edit-album-edit" href="#"><i class="fas fa-edit"></i></a>#}
+{#                                    {% endif %}#}
+                                    <a class="edit-album-delete" href="{% if playlist %}/edit/playlistmusic/{% get_delete_playlist_id playlist music.id %}/delete{% else %}/edit/music/{{ music.id }}/delete{% endif %}"><i class="fas fa-times-circle"></i></a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!--end copy                    -->
+                    </div>

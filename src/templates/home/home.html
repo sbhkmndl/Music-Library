@@ -1,0 +1,37 @@
+{% extends 'home/music_library_home_base.html' %}
+
+
+ {% block container %}
+{#     Artist  view #}
+     {% if artist or uploader %}
+        {% include 'home/artist_name.html' with artist=artist uploader=uploader %}
+     {% endif %}
+
+     {% if not album_view %}
+<!--       Music category-->
+        {% if music_obj %}
+                {% include 'home/single_music_container.html' with music_obj=music_obj search_q=search_q category=category artist=artist uploader=uploader %}
+        {% endif %}
+
+
+        <!--       Album category-->
+        {% if album_obj %}
+                {% include 'home/album_catagory_container.html' with album_obj=album_obj search_q=search_q category=category artist=artist uploader=uploader %}
+        {% endif %}
+
+
+      <!--       Album category-->
+        {% if playlist_obj %}
+                {% include 'home/playlist_catagory_container.html' with playlist_obj=playlist_obj search_q=search_q category=category uploader=uploader %}
+        {% endif %}
+
+{#         album View       #}
+         {% else %}
+
+         {% include 'home/album_playlist_view_container.html' with music_obj=music_obj album_obj=album_obj playlist_obj=playlist_obj album_no_of_music=album_no_of_music %}
+
+
+
+     {% endif %}
+
+ {% endblock %}

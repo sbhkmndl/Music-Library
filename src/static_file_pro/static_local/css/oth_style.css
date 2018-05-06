@@ -1,0 +1,30 @@
+body{
+    margin: 0px;
+}
+
+/*Scrole bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba( 130, 130, 130, 0.423 ); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+/*button blue outline remove*/
+button{
+     outline: none !important;
+}   

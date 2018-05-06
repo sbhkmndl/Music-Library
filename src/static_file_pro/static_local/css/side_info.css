@@ -1,0 +1,127 @@
+html,body{
+    height: 100%;
+}
+#side-info-bar{
+    width: 20%;
+    height: 100%  !important;
+    text-align: center;
+    overflow-y: auto;
+    background-color: #202426;
+    color: white;
+    position: fixed;
+    right: 0px;
+    padding-bottom: 80px;
+}
+#side-bar-full{
+    height: 100%;
+}
+#side-info-bar a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+#music-app-logo{
+   padding: 5px;
+}
+#music-app-logo-container{
+     background-color: gray;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+     position: relative;
+    left: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+#music-app-logo img{
+    width:70px;
+    height: 70px;
+    margin: 5px;
+    
+}
+
+#music-app-name{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+}
+#music-app-name i{
+    color: red;
+}
+
+/*Search music*/
+
+#music-search{
+    width: 100%;
+    float: right;
+    position: relative;
+    
+}
+#music-search-container{
+    display: flex;
+    padding: 10px 0px;
+    right: 0px;
+    position: relative;
+    float: right;
+}
+#music-search-text{
+    width: 70%;
+    height: auto;
+    background-color: rgba( 76, 79, 101, 0.45 );
+    border-style: none;
+    padding: 2px 8px;
+    color: #fff;
+}
+#music-search-submit{
+    background-image: url(../components/search.png);
+    width: 30%px;
+    height: 25px;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-color: rgba( 77, 76, 101, 0.45 );
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-style: none;
+    padding: 0px 9px;
+}
+
+/*Profile section*/
+#side-bar-profile{
+    display: flex;
+    text-align: center;
+    position: relative;
+    left: 10%;
+    bottom: 0px;
+    padding-top: 10px;
+}
+#side-bar-profile-pic{
+    margin: 0px 10px;
+    border-radius: 50%;
+}
+#side-bar-profile-pic img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#side-bar-profile p{
+    top: -5px;
+    position: relative;
+}
+
+/*underline like hr tag*/
+.side-bar-underline{
+    width: 60%;
+    background-color: aqua;
+    position: relative;
+    height: 0.5px;
+    border-radius: 50%;
+    border-color: silver;
+    border-style: solid;
+    border-width: 0.5px;
+    clear: both;
+    margin: 0px 20%;
+      
+}

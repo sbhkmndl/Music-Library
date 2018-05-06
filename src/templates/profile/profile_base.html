@@ -1,0 +1,50 @@
+
+{% load staticfiles %}
+<html>
+<head>
+    <title>{% if title %}{{ title }} | {% endif %}Music Library</title>
+
+    <!--    Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <!--icon-->
+    <link rel="icon" type="image/ico" href="{% static 'components/logo.png' %}">
+
+    <!-- BootStrap CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login_signup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/success_message.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css' %}">
+
+
+</head>
+
+<body>
+{% if messages %}
+    {% include 'messages/success_message.html' with messages=messages %}
+{% endif %}
+    <section id="music-user-login">
+        <div id="signin-background-blur">
+            <div id="login-signup-container-right">
+                <div id="login-sign-up-music-page-title">
+                    <p>
+                        <a href="/"><img src="{% static 'components/logo.png' %}"></a>
+                    </p>
+                    <p>Music Library</p>
+                    <p id="login-sign-up-music-page-relation">{% if title %} {{ title }} {% endif %}</p>
+                </div>
+                <div id="login-signup-form-container">
+                    {% block form_content %}
+
+                    {% endblock %}
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

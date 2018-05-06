@@ -1,0 +1,207 @@
+
+/*Scrole bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba( 130, 130, 130, 0.423 ); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+
+
+@media (min-width: 576px) {
+    #upload-container-middel{
+    width: 70%;
+    left: 15%;
+}
+}
+
+@media (min-width: 768px) {
+   #upload-container-middel{
+    width: 60%;
+    left: 20%;
+}
+}
+
+@media (min-width: 992px) {
+   #upload-container-middel{
+    width: 50%;
+    left: 25%;
+}
+}
+
+@media (min-width: 1200px) {
+   #upload-container-middel{
+    width: 40%;
+    left: 30%;
+}
+}
+
+/*upload*/
+
+body{
+    background-image: url(../components/upload-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 130% 130%;
+    margin: 0px;
+    min-height: 100vh;
+}
+#upload-container-main{
+    min-height: 100vh;
+}
+#upload-background-blur{
+    background-color: rgba( 41, 46, 65, 0.464 );
+    width: 100%;
+    min-height: 100vh;
+    
+}
+#upload-container-middel{
+    background-color: rgba( 70, 77, 75, 0.692 );
+    position: relative;
+    overflow: auto;
+    min-height: 100vh;
+}
+#upload-page-title{
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 21px;
+}
+#upload-page-title>p{
+    margin: 5px 0px;
+}
+#upload-page-title img{
+    width: 70px;
+    height: 70px;
+}
+#upload-page-relation{
+    margin: 2px !important;
+    font-size: 17px;
+    color: #8d8a71;
+}
+#upload-form-container{
+    text-align: left;
+    padding: 10px;
+    background-color: rgba( 141, 134, 92, 0.247 );
+    overflow: auto;
+}
+#upload-form p{
+    margin: 0px;
+    padding: 8px 7px 5px 20px;
+}
+#upload-form label{
+    color: #fff;
+    width: 100%;
+}
+#upload-form input,select,textarea{
+    background-color: rgba( 164, 147, 59, 0.247 );
+    padding-left: 5px;
+    width: 200px;
+    height: 26px;
+    display: block;
+    margin: 3px;
+    color: #b5cbb3;
+    border-style: solid;
+    border-color: #77b671;
+    border-width: 0.8px;
+}
+#upload-form textarea{
+    min-height: 100px !important;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    
+}
+#upload-form select option{
+    background-color: #343248;;
+}
+.upload-input-check{
+    width: 15px !important;
+    height: 15px !important;
+    display: inline-block !important;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+#upload-submit-button{
+    padding: 20px 40px;
+    
+}
+#upload-submit-button input{
+    width: 100px;
+    height: 35px;
+    background-color: transparent;
+    color: #a1dce2;
+    border-color: #3f3b6c;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#upload-submit-button input:hover{
+    transform: scale(0.97);
+}
+
+/*Update form image*/
+#update-form-image{
+    text-align: center;
+    padding-bottom: 10px;
+}
+#update-form-image>img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/*read only*/
+.read-only{
+    cursor: not-allowed;
+}
+
+
+/*add artist in add song*/
+.creatte-artist{
+    text-decoration: none;
+    color: #48dd11;
+    font-weight: 900;
+    font-size: 25px;
+    float: right;
+    position: relative;
+    top: -28px;
+}
+
+
+.tooltip {
+    position: relative;
+    border-bottom-style: none;
+}
+
+.tooltiptext {
+    font-size: 11px;
+    visibility: hidden;
+    width: 100px;
+    background-color: #40453e;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    top: -5px;
+    right: 105%;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 30;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

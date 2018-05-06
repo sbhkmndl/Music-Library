@@ -1,0 +1,42 @@
+{% extends 'edit/music_edit_delete_bash.html' %}
+{% load staticfiles %}
+ {% block editmusic %}
+
+
+<section id="edit-music-profile-view">
+    <div id="upload-container-middel">
+        <div id="upload-page-title">
+            <p>
+                <img src="{% static 'components/logo.png' %}">
+            </p>
+            <p>Music Library</p>
+            <p id="upload-page-relation">Profile</p>
+        </div>
+        <div id="upload-form-container">
+            <div id="edit-music-profile-view">
+                <div id="update-form-image">
+                    <img src="{% if prof_img %}{{ prof_img }}{% else %}{% static 'components/profile-default.png' %}{% endif %}">
+                </div>
+                <p>
+                    <label id="view-username">{{ username }}</label>
+                </p>
+                <p>
+                    <label id="view-name">{{ name }}</label>
+                </p>
+                <p>
+                    <label id="view-email">{{ email }}</label>
+                </p>
+            </div>
+            <div id="edit-music-profile-update-link-main">
+                <div id="prof-edit-link-div">
+                    <a href="/create/updateUser">Edit</a>
+                </div>
+            </div>
+            <div id="profile-change-password">
+                <a href="/profile/changePassword">Change Password</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

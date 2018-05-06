@@ -1,0 +1,22 @@
+{% extends "profile/profile_base.html" %}
+
+{% block form_content %}
+
+<form method="post" action="."> {% csrf_token %}
+    <div id="login-signup-form">
+
+        {{ form }}
+{#        <label>username</label>#}
+{#        <input type="text" placeholder="Username">#}
+{#        <label>Email</label>#}
+{#        <input type="email" placeholder="Email">#}
+{#        <label>Password</label>#}
+{#        <input type="password" placeholder="Password">#}
+
+    </div>
+    <div id="login-signup-form-submit">
+        <input type="submit" value="Sign up">
+    </div>
+</form>
+
+{% endblock %}

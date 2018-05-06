@@ -1,0 +1,71 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>Edit</title>
+
+    <!--    Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+
+
+    <!--icon-->
+    <link rel="icon" type="image/ico" href="{% static 'components/logo.png' %}">
+
+    <!-- BootStrap CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fontawesome-all.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/success_message.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/music_upload.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/edit_music_menubar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/edit_music.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/music_catagory.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/album-playlist-container.css' %}">
+
+
+</head>
+
+<body>
+{% if messages %}
+    {% include 'messages/success_message.html' with messages=messages %}
+{% endif %}
+
+    <section id="edit-view-main-container">
+
+{#        Edit Music menubar#}
+        {% include 'edit/edit_delete_manubar.html' %}
+
+        <section id="music-catagory-section" class="edit-music-full-height">
+
+            <section class="music-catagory-container">
+                <div class="music-catagory-title">
+                    <p>{% if category %}{{ category }}{% endif %}</p>
+                </div>
+                <div class="music-catagory-container-inner">
+
+<!--      view go here              -->
+                {% block editmusic %}
+
+
+
+                    {% endblock %}
+
+                   
+
+                </div>
+
+            </section>
+        </section>
+
+    </section>
+
+
+
+
+{#    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>#}
+{#    <script src="{% static 'js/edit_music.js' %}"></script>#}
+
+</body>
+
+</html>

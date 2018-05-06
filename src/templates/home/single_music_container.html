@@ -1,0 +1,20 @@
+<section class="music-catagory-container">
+                <div class="music-catagory-title">
+                    <p>Musics</p>
+                </div>
+                <div class="music-catagory-container-inner">
+                    <div class="music-catagory-list-single">
+<!--                       repeated item -->
+                        {% for music in music_obj %}
+                            {% include 'home/single_music_component.html' with music=music %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="music-catagory-more">
+                {% if not category %}
+                     <a href="{% if artist %}/artist/music/?q={{ artist }}{% elif uploader %}/uploader/music/?q={{ uploader.id }}{% else %}/search/{% if search_q %}?q={{ search_q }}&catagory=music{% else %}music{% endif %}{% endif %}">SHOW MORE
+                    <i class="fas fa-angle-down"></i>
+                    </a>
+                {% endif %}
+                </div>
+            </section>
