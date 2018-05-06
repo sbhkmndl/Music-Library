@@ -29,8 +29,8 @@ ALLOWED_HOSTS = ['localhost']
 
 # Email
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'musiclibrary255@gmail.com'
-EMAIL_HOST_PASSWORD = 'Music@123'
+EMAIL_HOST_USER = 'yourmail@mail.com'
+EMAIL_HOST_PASSWORD = 'your password'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
