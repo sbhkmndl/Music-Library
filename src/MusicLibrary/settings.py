@@ -139,7 +139,7 @@ STATICFILES_DIRS = (
             os.path.join(BASE_DIR, 'static_file_pro', 'static_local'),
 )
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/' #http://127.0.0.1:8081/'  #django server can't handle media files well, for better response user different server(like node server)
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_file_env', 'media_root')
 
 
