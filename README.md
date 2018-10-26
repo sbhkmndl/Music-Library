@@ -3,7 +3,7 @@
 It's my MCA last semester project based on Python/Django. 
 A web based application where users can upload and share music to other users. Users can create album and playlist and also listen them.
 
-### Run followin commands to run project after clone
+### Run following commands after clone the project
 * ```cd Music-Library```
 * ```pip install virtualenv```
 * ```virtualenv .```
